@@ -1,10 +1,55 @@
-This is the official documentation for your Enterprise Support & Insight Portal. This project is a full-stack solution designed to bridge the gap between high-end user experience and robust data management.🚀 InsightFlow Support & Feedback PortalA sleek, high-contrast Flask & React application that handles multi-path user sessions: collecting deep-dive feedback or registering and tracking formal complaints with unique encryption-style IDs.✨ Key Features👤 User-Facing ExperienceDual-Path Logic: Dynamic conversation branching based on user intent (Feedback vs. Complaint).Unique Ticket Generation: Real-time generation of CMP-XXX and FBK-XXX identifiers.Instant PDF Receipts: Integrated jsPDF allows users to download an official digital receipt of their ticket.Real-Time Tracking: A dedicated tracking tool for customers to check if their complaint status is Pending or Resolved.Premium UI: Modern "Glassmorphism" design on a pure black (#000) backdrop.🛡️ Administrative ControlSecure Dashboard: Password-protected portal (admin123) for data oversight.Visual Analytics: Dynamic bar graphs (powered by Chart.js) visualizing satisfaction trends.Transcript Management: Direct access to individual session logs in .txt format.Resolution Workflow: One-click "Mark Resolved" functionality.Deep Deletion: Synchronized deletion of database records and physical server files.🛠️ Tech StackComponentTechnologyBackendPython / FlaskFrontendReact.js (v18)StylingTailwind CSSChartsChart.jsPDF EnginejsPDFStorageFlat-file JSON & Individual TXT Transcripts📂 Project StructurePlaintextproject-folder/
-├── app.py              # Flask server, API routes, and logic
-├── history.json        # Central database for all records
-├── reports/            # Folder containing individual TXT transcripts
+🚀 InsightFlow Support & Feedback Portal
+
+A sleek, high-contrast Flask & React application delivering enterprise-grade support with dual-path conversations, encrypted-style ticket IDs, and instant PDF receipts.
+
+
+✨ Highlights
+👤 Customer Experience
+
+Smart Routing — Dynamic branching: Feedback (FBK-XXX) or Complaint (CMP-XXX)
+Instant Receipts — Download official PDF tickets via jsPDF
+Live Tracking — Real-time status checks (Pending/Resolved)
+Premium Design — Glassmorphism UI on pure black (#000)
+
+🛡️ Admin Control
+
+Secure Dashboard — Password-protected portal (default: admin123)
+Visual Analytics — Chart.js satisfaction graphs
+Full Transcripts — Individual .txt session logs
+Quick Actions — One-click resolution & synchronized deletion
+
+
+🛠️ Tech Stack
+LayerTechnologyBackendPython / FlaskFrontendReact 18 + Tailwind CSSChartsChart.jsPDFsjsPDFStorageJSON + TXT files
+
+📂 Structure
+project-folder/
+├── app.py              # Flask API & logic
+├── history.json        # Central database
+├── reports/            # Session transcripts
 └── static/
-    └── index.html      # Unified React frontend & Tailwind styles
-⚙️ Setup & InstallationInstall Flask:Bashpip install flask
-Initialize Folders:Ensure a folder named reports exists in your root directory (the app will attempt to create this automatically).Run the Application:Bashpython app.py
-Access the Portal:Open your browser to http://127.0.0.1:5000.📖 Usage GuideFor the CustomerClick "Start New Session" on the landing page.Follow the bot prompts. Choosing "Register Complaint" will unlock the tracking number.Upon completion, save the Case ID or click "Download PDF Receipt."Track progress later by entering the ID in the Tracking box on the home page.For the AdminNavigate to the landing page.In the Management card, enter the passphrase (default: admin123).Review the Satisfaction Distribution graph at the top.Click "View" to read a full transcript or "Resolve" to update a user's ticket status.🔒 Security ConfigurationTo change the admin access key, modify the following line in app.py:PythonADMIN_PASSWORD = "your-new-password-here"
-Note: For data integrity, it is recommended to occasionally backup the history.json file and the reports/ directory.
+    └── index.html      # React frontend
+
+⚡ Quick Start
+bash# Install dependencies
+pip install flask
+
+# Run server
+python app.py
+
+# Open browser
+http://127.0.0.1:5000
+The app auto-creates the reports/ folder if missing.
+
+📖 Usage
+Customers → Start session → Follow prompts → Download PDF → Track with Case ID
+Admins → Enter passphrase → View analytics → Manage transcripts → Resolve tickets
+
+🔒 Security
+Change admin password in app.py:
+pythonADMIN_PASSWORD = "your-secure-password"
+Backup reminder: Regularly save history.json and reports/ directory.
+
+<div align="center">
+Built for seamless support experiences 🎯
+</div>
