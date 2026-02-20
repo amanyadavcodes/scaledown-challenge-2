@@ -38,7 +38,7 @@ pip install flask
 python app.py
 
 # Open browser
-http://127.0.0.1:5000
+
 The app auto-creates the reports/ folder if missing.
 
 📖 Usage
